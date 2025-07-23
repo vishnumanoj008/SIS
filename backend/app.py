@@ -78,7 +78,7 @@ def get_or_create_conversation(conversation_id: str) -> Conversation:
 
 
 
-'''@app.post("/chat/")
+@app.post("/chat/")
 async def chat(input: UserInput):
     conversation = get_or_create_conversation(input.conversation_id)
 
@@ -109,7 +109,7 @@ async def chat(input: UserInput):
         
     except Exception as e:
         raise HTTPException(status_code=500, detail=str(e))
-    '''
+
 
 
 @app.post("/chat/")
